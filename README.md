@@ -1,6 +1,6 @@
 # DawaKavach
 
-A medicine safety checker for families. Take a photo of a pharmacy bill, and DawaCheck tells you if two medicines in the house contain the same salt or shouldn't be taken together.
+A medicine safety checker for families (kavach means shield). Take a photo of a pharmacy bill, and DawaKavach tells you if two medicines in the house contain the same salt or shouldn't be taken together.
 
 We're building this for our Java Full Stack Development lab (AIML). Version 1 is what we're submitting. Version 2 is the stuff we want to add after that.
 
@@ -52,7 +52,7 @@ Python is only used for the ML part. Everything else is Java.
 ## Folder structure
 
 ```
-dawacheck/
+dawakavach/
 ├── backend/       Spring Boot app (the HTML/CSS/JS pages live in src/main/resources/static)
 ├── ml-service/    FastAPI app and the trained model
 ├── notebooks/     Jupyter notebooks we used to train the model
@@ -69,7 +69,7 @@ Install Tesseract first. On Ubuntu it's `sudo apt install tesseract-ocr`. On Win
 **1. Create the database**
 
 ```sql
-CREATE DATABASE dawacheck;
+CREATE DATABASE dawakavach;
 ```
 
 **2. Set your environment variables**
@@ -77,7 +77,7 @@ CREATE DATABASE dawacheck;
 You can also put these in `backend/src/main/resources/application.properties`. Just don't commit your API key.
 
 ```
-DB_URL=jdbc:mysql://localhost:3306/dawacheck
+DB_URL=jdbc:mysql://localhost:3306/dawakavach
 DB_USER=root
 DB_PASSWORD=your_password
 LLM_API_KEY=your_key
@@ -140,7 +140,7 @@ Prices in these datasets can be a few years old, so the app shows them as approx
 
 ## Please read this
 
-DawaCheck is a student project, not a medical device. It never tells anyone to stop or change a medicine, and you shouldn't use it that way. If it flags something, show it to your doctor or pharmacist.
+DawaKavach is a student project, not a medical device. It never tells anyone to stop or change a medicine, and you shouldn't use it that way. If it flags something, show it to your doctor or pharmacist.
 
 ## Team
 
