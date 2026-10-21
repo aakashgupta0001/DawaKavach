@@ -1,4 +1,4 @@
-# DawaCheck
+# DawaKavach
 
 A medicine safety checker for families. Take a photo of a pharmacy bill, and DawaCheck tells you if two medicines in the house contain the same salt or shouldn't be taken together.
 
