@@ -1,0 +1,5 @@
+target/
+
+# H2 development database. Dropping it makes the next start re-seed the
+# knowledge base and the demo family from SeedService.
+data/

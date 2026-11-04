@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Medicine list — DawaCheck</title>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/print.css" media="print">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header id="app-header" data-nav="family"></header>
+
+<main class="page" id="main">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="dashboard.html" data-i18n="family.title">Your family</a>
+    <span aria-hidden="true">/</span>
+    <span id="crumb-name" class="strong"></span>
+  </nav>
+
+  <div class="page-head" id="member-head"></div>
+
+  <div class="grid grid--stats mb-5" id="member-stats"></div>
+
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div id="tab-panel" role="tabpanel"></div>
+</main>
+
+<footer id="app-footer"></footer>
+
+<script src="js/config.js"></script>
+<script src="js/mock-data.js"></script>
+<script src="js/safety-engine.js"></script>
+<script src="js/api.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/shell.js"></script>
+<script src="js/member.js"></script>
+</body>
+</html>

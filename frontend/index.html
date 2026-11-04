@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DawaCheck — Medicine safety for the whole family</title>
+<meta name="description" content="DawaCheck reads medicines from a photo of a pharmacy bill, finds repeated salts and risky combinations across a family member's whole list, and explains each warning in simple Hindi or English.">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/layout.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<a class="skip-link" href="#auth-panel">Skip to the login form</a>
+
+<main class="auth">
+  <section class="auth__pitch">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="currentColor">
+          <path d="M12 2 4 5v6c0 5 3.4 9.1 8 11 4.6-1.9 8-6 8-11V5l-8-3Z"/>
+          <path d="m9 12 2 2 4-4" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span>DawaCheck</span>
+    </a>
+
+    <div>
+      <h1>Nobody should take the same salt twice without knowing it.</h1>
+      <p class="lede">One salt is sold under many brand names. A fever tablet and a cold tablet can both be paracetamol, and no single doctor sees the whole list. DawaCheck checks the whole list.</p>
+    </div>
+
+    <ul class="pitch-list">
+      <li><span class="tick" aria-hidden="true">1</span><span><strong>Scan the bill.</strong> OCR reads a photo of a pharmacy bill or medicine box and matches each line to an Indian brand.</span></li>
+      <li><span class="tick" aria-hidden="true">2</span><span><strong>Check the whole list.</strong> Repeated salts, known interactions from the dataset, and AI-predicted possible risks — all checked on salts, not brand names.</span></li>
+      <li><span class="tick" aria-hidden="true">3</span><span><strong>Understand it.</strong> Every alert in plain Hindi or English, with questions to ask the doctor and cheaper same-salt generics.</span></li>
+    </ul>
+
+    <p class="small mb-0" style="opacity:.85;max-width:50ch">
+      DawaCheck never tells anyone to start, stop or change a medicine. Every alert ends with
+      “confirm with your doctor or pharmacist.”
+    </p>
+  </section>
+
+  <section class="auth__panel" id="auth-panel">
+    <div class="auth__form-wrap">
+      <div class="row spread mb-5">
+        <div class="segmented" role="group" aria-label="Language" id="lang-toggle"></div>
+        <div class="btn-group" id="a11y-controls"></div>
+      </div>
+
+      <h2 id="auth-title" data-i18n="auth.loginTitle">Log in</h2>
+      <p class="muted small" id="auth-sub">Check your family’s medicines together, in one place.</p>
+
+      <form id="auth-form" novalidate>
+        <div class="field hidden" id="field-name">
+          <label class="field__label" for="name" data-i18n="auth.name">Your name</label>
+          <input class="input" type="text" id="name" name="name" autocomplete="name">
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="email" data-i18n="auth.email">Email</label>
+          <input class="input" type="email" id="email" name="email" autocomplete="email" required>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="password" data-i18n="auth.password">Password</label>
+          <input class="input" type="password" id="password" name="password" autocomplete="current-password" required>
+          <p class="field__hint hidden" id="pw-hint">At least 8 characters.</p>
+        </div>
+
+        <label class="check hidden" id="field-consent">
+          <input type="checkbox" id="consent">
+          <span>
+            I understand DawaCheck is an awareness tool and not a doctor, and that it never advises
+            starting, stopping or changing a medicine. Data is handled under the consent and deletion
+            principles of India’s Digital Personal Data Protection Act, 2023.
+          </span>
+        </label>
+
+        <div id="auth-error" class="notice notice--red hidden mb-4" role="alert"></div>
+
+        <button class="btn btn--primary btn--lg btn--block" type="submit" id="auth-submit" data-i18n="auth.loginBtn">Log in</button>
+      </form>
+
+      <p class="center mt-4 mb-2">
+        <button class="btn btn--ghost btn--sm" type="button" id="auth-switch" data-i18n="auth.toRegister">New here? Create an account</button>
+      </p>
+
+      <div class="notice mt-5" id="demo-note">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v5.5M12 7.8h.01" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg>
+        <p class="mb-0"><span data-i18n="auth.demo">Demo account: aakash@example.com with the password dawacheck.</span>
+        The demo family (Dadaji 72, Dadi 68, Papa 48 and one student) is already loaded.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="js/config.js"></script>
+<script src="js/mock-data.js"></script>
+<script src="js/safety-engine.js"></script>
+<script src="js/api.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>
