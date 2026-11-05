@@ -148,6 +148,13 @@ html[data-contrast="high"] .auth__pitch { background: #00323f; }
 }
 
 @media (max-width: 860px) {
+  .auth__pitch {
+  order: 2;
+}
+
+.auth__panel {
+  order: 1;
+}
   .auth { grid-template-columns: 1fr; min-height: 0; }
   .auth__pitch { padding: var(--sp-6) var(--sp-4); }
   .auth__panel { padding: var(--sp-6) var(--sp-4); }
